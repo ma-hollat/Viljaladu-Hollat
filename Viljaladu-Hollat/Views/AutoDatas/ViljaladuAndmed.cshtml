@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Viljaladu_Hollat.Models.AutoData>
+
+@{
+    ViewBag.Title = "ViljaladuAndmed";
+}
+
+<h2>ViljaladuAndmed</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.autonr)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sisenemismass)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lahkumismass)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.autonr)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sisenemismass)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lahkumismass)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

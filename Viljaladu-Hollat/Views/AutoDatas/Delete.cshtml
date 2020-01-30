@@ -1,0 +1,48 @@
+﻿@model Viljaladu_Hollat.Models.AutoData
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>AutoData</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.autonr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.autonr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sisenemismass)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sisenemismass)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lahkumismass)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lahkumismass)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

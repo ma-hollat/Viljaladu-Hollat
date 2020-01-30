@@ -1,0 +1,42 @@
+﻿@model Viljaladu_Hollat.Models.AutoData
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>AutoData</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.autonr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.autonr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sisenemismass)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sisenemismass)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lahkumismass)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lahkumismass)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

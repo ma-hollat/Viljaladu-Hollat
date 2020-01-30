@@ -29,5 +29,7 @@ namespace Viljaladu_Hollat.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<Viljaladu_Hollat.Models.AutoData> AutoDatas { get; set; }
     }
 }
