@@ -1,10 +1,10 @@
 ﻿@model Viljaladu_Hollat.Models.AutoData
 
 @{
-    ViewBag.Title = "LisaAndmed";
+    ViewBag.Title = "Lisa sisenemismass";
 }
 
-<h2>LisaAndmed</h2>
+<h2>Lisa sisenemismass</h2>
 
 
 @using (Html.BeginForm()) 
@@ -31,13 +31,7 @@
             </div>
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.lahkumismass, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.lahkumismass, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.lahkumismass, "", new { @class = "text-danger" })
-            </div>
-        </div>
+
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">

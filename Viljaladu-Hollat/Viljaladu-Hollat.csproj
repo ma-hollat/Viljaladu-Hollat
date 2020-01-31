@@ -252,6 +252,7 @@
     <Content Include="Views\AutoDatas\Import.cshtml" />
     <Content Include="Views\AutoDatas\Export.cshtml" />
     <Content Include="Views\AutoDatas\LisaAndmed.cshtml" />
+    <Content Include="Views\AutoDatas\Delete2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

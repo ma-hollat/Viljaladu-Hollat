@@ -166,7 +166,30 @@ namespace Viljaladu_Hollat.Controllers
             }
             return View(autoData);
         }
+        [Authorize]
+        public ActionResult Delete2(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            AutoData autoData = db.AutoDatas.Find(id);
+            if (autoData == null)
+            {
+                return HttpNotFound();
+            }
+            return View(autoData);
+        }
 
+        [HttpPost, ActionName("Delete2")]
+        [ValidateAntiForgeryToken]
+        public ActionResult Delete2Confirmed(int id)
+        {
+            AutoData autoData = db.AutoDatas.Find(id);
+            db.AutoDatas.Remove(autoData);
+            db.SaveChanges();
+            return RedirectToAction("ViljaladuAndmed");
+        }
         // POST: AutoDatas/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]

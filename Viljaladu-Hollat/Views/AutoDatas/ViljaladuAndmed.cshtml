@@ -4,10 +4,10 @@
     ViewBag.Title = "ViljaladuAndmed";
 }
 
-<h2>ViljaladuAndmed</h2>
+<h2>Viljaladu andmed</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "LisaAndmed")
 </p>
 <table class="table">
     <tr>
@@ -36,8 +36,7 @@
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+            @Html.ActionLink("Delete", "Delete2", new { id=item.id })
         </td>
     </tr>
 }
