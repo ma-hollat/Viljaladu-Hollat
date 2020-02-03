@@ -41,7 +41,7 @@ namespace Viljaladu_Hollat.Controllers
 
         public ActionResult Import()
         {
-            return View();
+            return View("ViljaladuAndmed");
         }
 
         public ActionResult Export()
